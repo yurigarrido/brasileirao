@@ -1,6 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 const db = require('.');
-const Teams = require('./teams');
+const Team = require('./teams');
 
 class Match extends Model {
   public homeTeamGoals: string;
@@ -22,10 +22,10 @@ Match.init({
   tableName: 'matches',
 });
 
-Teams.hasMany(Match, { foreignKey: 'homeTeam' as 'teamHome' });
-Teams.hasMany(Match, { foreignKey: 'awayTeam' as 'teamAway' });
+Team.hasMany(Match, { foreignKey: 'homeTeam' as 'teamHome' });
+Team.hasMany(Match, { foreignKey: 'awayTeam' as 'teamAway' });
 
-Match.belongsTo(Teams, { foreignKey: 'homeTeam', as: 'teamHome' });
-Match.belongsTo(Teams, { foreignKey: 'awayTeam', as: 'teamAway' });
+Match.belongsTo(Team, { foreignKey: 'homeTeam', as: 'teamHome' });
+Match.belongsTo(Team, { foreignKey: 'awayTeam', as: 'teamAway' });
 
 export default Match;
