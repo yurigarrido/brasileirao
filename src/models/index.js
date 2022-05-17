@@ -30,6 +30,10 @@ Object.keys(db).forEach(modelName => {
     db[modelName].associate(db);
   }
 });
+import { Sequelize } from 'sequelize';
+import * as config from '../config/database';
+
+export default new Sequelize(config);
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
