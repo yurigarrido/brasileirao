@@ -1,5 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
-const db = require('.');
+// const db = require('.');
+import db from './database';
 const Team = require('./teams');
 
 class Match extends Model {

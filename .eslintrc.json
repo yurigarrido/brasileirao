@@ -17,6 +17,7 @@
         "@typescript-eslint"
     ],
     "rules": {
+        "semi": "error",
         "comma-dangle": ["error", "always-multiline"],
         "comma-spacing": ["error", { "before": false, "after": true }],
         "eol-last": ["error", "always"],
