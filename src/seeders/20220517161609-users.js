@@ -18,7 +18,12 @@ module.exports = {
         email: 'user@user.com',
         password: 'usersecreto', // secret_user
       },
-     
+      {
+        username: 'yuri',
+        role: 'user',
+        email: 'yuri@user.com',
+        password: 'yurigarrido', // secret_user
+      },
     ], {});
   },
 

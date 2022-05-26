@@ -1,5 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
-const db = require('.');
+import db from './database';
+
 
 class User extends Model {
   public id: number;
